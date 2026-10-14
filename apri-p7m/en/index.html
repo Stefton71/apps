@@ -4,25 +4,39 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Apri P7M – Digital Signature</title>
-<meta name="description" content="Mac app that opens .p7m and .p7s files, verifies the digital signature against the Italian AgID trusted list and shows the document. Everything stays on your Mac.">
+<meta name="description" content="Mac app that opens .p7m and .p7s files and signed PDFs, verifies the digital signature against the Italian AgID trusted list and shows the document. Everything stays on your Mac.">
 <link rel="alternate" hreflang="it" href="https://stefton71.github.io/apps/apri-p7m/">
 <link rel="alternate" hreflang="en" href="https://stefton71.github.io/apps/apri-p7m/en/">
+<link rel="alternate" hreflang="de" href="https://stefton71.github.io/apps/apri-p7m/de/">
+<link rel="alternate" hreflang="fr" href="https://stefton71.github.io/apps/apri-p7m/fr/">
+<link rel="alternate" hreflang="es" href="https://stefton71.github.io/apps/apri-p7m/es/">
+<link rel="alternate" hreflang="x-default" href="https://stefton71.github.io/apps/apri-p7m/">
 <link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/lingua.js" defer></script>
 </head>
 <body>
 <header class="top">
-  <a class="home" href="../../en/">Mac apps</a>
+  <a class="home" href="../../en/">Mac Apps</a>
   <a href="support.html">Support</a>
   <a href="privacy.html">Privacy</a>
-  <a href="../" lang="it" hreflang="it">Italiano</a>
+  <details class="lang">
+    <summary aria-label="Language"><span aria-hidden="true">🌐</span> English</summary>
+    <ul>
+      <li><a href="../" lang="it" hreflang="it">Italiano</a></li>
+      <li><a href="./" lang="en" hreflang="en" aria-current="page">English</a></li>
+      <li><a href="../de/" lang="de" hreflang="de">Deutsch</a></li>
+      <li><a href="../fr/" lang="fr" hreflang="fr">Français</a></li>
+      <li><a href="../es/" lang="es" hreflang="es">Español</a></li>
+    </ul>
+  </details>
 </header>
 <main>
   <section class="hero">
     <img src="../icona.png" alt="Apri P7M icon">
     <div>
       <h1>Apri P7M – Digital Signature</h1>
-      <p class="muted">Open .p7m and .p7s files, verify the digital signature and read the document. Verification happens entirely on your Mac.</p>
-      <span class="badge">Coming soon to the Mac App Store · macOS 14 or later · Italian interface</span>
+      <p class="muted">Open .p7m and .p7s files and signed PDFs, verify the digital signature and read the document. Verification happens entirely on your Mac.</p>
+      <span class="badge">Coming soon to the Mac App Store · macOS 14 or later · English, Italiano, Deutsch, Français, Español</span>
     </div>
   </section>
 
@@ -35,17 +49,20 @@
     <li><strong>Qualified certificate</strong> and qualified signature creation device (QSCD).</li>
     <li><strong>Certificate validity</strong> at the time of the timestamp, or at today's date.</li>
     <li><strong>Timestamp</strong> verified and used as the time reference.</li>
+    <li><strong>Later changes:</strong> for PDFs, the app tells you if the document was modified after signing and shows the signed version.</li>
     <li><strong>Revocation status</strong> (OCSP/CRL), if you turn it on in Settings.</li>
   </ul>
 
   <h2>Features</h2>
   <ul class="features">
+    <li>Signed PDFs (PAdES and PKCS#7), including multiple signatures and document timestamps.</li>
     <li>Multiple signatures (.pdf.p7m.p7m) and multiple signers.</li>
     <li>Detached signatures (.p7s) together with the original document.</li>
     <li>Files in binary, Base64 or PEM format.</li>
     <li>Quick Look preview, opening in the default app, and Save As.</li>
     <li>Recognises PDFs, Italian XML e-invoices, Office documents and images.</li>
     <li>Verification report you can copy.</li>
+    <li>Interface in English, Italian, German, French and Spanish, following your Mac's language.</li>
   </ul>
 
   <h2>Privacy</h2>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apri P7M – Support</title>
+<meta name="description" content="Support und häufige Fragen zu Apri P7M – Digitale Signatur für macOS.">
+<link rel="alternate" hreflang="it" href="https://stefton71.github.io/apps/apri-p7m/supporto.html">
+<link rel="alternate" hreflang="en" href="https://stefton71.github.io/apps/apri-p7m/en/support.html">
+<link rel="alternate" hreflang="de" href="https://stefton71.github.io/apps/apri-p7m/de/support.html">
+<link rel="alternate" hreflang="fr" href="https://stefton71.github.io/apps/apri-p7m/fr/support.html">
+<link rel="alternate" hreflang="es" href="https://stefton71.github.io/apps/apri-p7m/es/support.html">
+<link rel="alternate" hreflang="x-default" href="https://stefton71.github.io/apps/apri-p7m/supporto.html">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/lingua.js" defer></script>
+</head>
+<body>
+<header class="top">
+  <a class="home" href="./">Apri P7M</a>
+  <a href="support.html">Support</a>
+  <a href="privacy.html">Privacy</a>
+  <details class="lang">
+    <summary aria-label="Sprache"><span aria-hidden="true">🌐</span> Deutsch</summary>
+    <ul>
+      <li><a href="../supporto.html" lang="it" hreflang="it">Italiano</a></li>
+      <li><a href="../en/support.html" lang="en" hreflang="en">English</a></li>
+      <li><a href="support.html" lang="de" hreflang="de" aria-current="page">Deutsch</a></li>
+      <li><a href="../fr/support.html" lang="fr" hreflang="fr">Français</a></li>
+      <li><a href="../es/support.html" lang="es" hreflang="es">Español</a></li>
+    </ul>
+  </details>
+</header>
+<main>
+  <h1>Support</h1>
+  <p class="muted">Apri P7M – Digitale Signatur für macOS</p>
+
+  <h2>Kontakt</h2>
+  <p>Schreib an <a href="mailto:support@lifenex.it?subject=Apri%20P7M">support@lifenex.it</a> und gib deine macOS-Version sowie nach Möglichkeit den mit „Bericht kopieren“ kopierten Text an. Bitte sende keine vertraulichen Dokumente.</p>
+
+  <h2>Häufige Fragen</h2>
+  <details>
+    <summary>Warum ist die Signatur „intakt, mit Warnungen“?</summary>
+    <p>Das Dokument wurde nicht verändert, aber mindestens eine Zertifikatsprüfung ist nicht bestanden oder wurde nicht durchgeführt: zum Beispiel ist die Widerrufsprüfung deaktiviert, das Zertifikat ist abgelaufen und es fehlt ein Zeitstempel, oder der Anbieter steht nicht auf der qualifizierten AgID-Liste.</p>
+  </details>
+  <details>
+    <summary>Das Zertifikat ist abgelaufen: Ist die Signatur gültig?</summary>
+    <p>Ohne Zeitstempel lässt sich nicht nachweisen, dass die Signatur angebracht wurde, als das Zertifikat gültig war. Enthält die Signatur einen anerkannten Zeitstempel, prüft die App das Zertifikat zum Zeitpunkt des Zeitstempels.</p>
+  </details>
+  <details>
+    <summary>Wie prüfe ich eine .p7s-Datei?</summary>
+    <p>Eine .p7s-Datei enthält nur die Signatur: Öffne die .p7s-Datei und wähle das Originaldokument, wenn die App danach fragt.</p>
+  </details>
+  <details>
+    <summary>Kann ich signierte PDFs (PAdES) prüfen?</summary>
+    <p>Ja: Öffne das PDF wie jede andere Datei. Die App prüft jede Signatur und jeden Zeitstempel im PDF und zeigt an, ob das Dokument nach dem Signieren verändert wurde; mit „Signierte Version“ siehst du das PDF genau so, wie es beim Signieren war.</p>
+  </details>
+  <details>
+    <summary>Der Vertrauensdiensteanbieter wird nicht erkannt.</summary>
+    <p>Öffne die Einstellungen und klicke auf „Von AgID aktualisieren“, um die aktuelle Liste der qualifizierten Anbieter zu laden.</p>
+  </details>
+  <details>
+    <summary>Wie öffne ich eine elektronische Rechnung .xml.p7m?</summary>
+    <p>Öffne sie wie jede andere Datei: Die App prüft die Signatur und extrahiert die XML-Datei der Rechnung, die du sichern oder mit deiner Rechnungssoftware öffnen kannst.</p>
+  </details>
+  <details>
+    <summary>In welchen Sprachen gibt es die App?</summary>
+    <p>Auf Deutsch, Englisch, Italienisch, Französisch und Spanisch: Die App verwendet automatisch die Sprache deines Mac. Eine andere Sprache kannst du unter Systemeinstellungen → Allgemein → Sprache & Region → Programme wählen.</p>
+  </details>
+  <details>
+    <summary>Welche Rechtswirkung hat das Ergebnis?</summary>
+    <p>Es ist eine informative Prüfung auf deinem Mac und ersetzt keine qualifizierten Validierungsdienste im Sinne der eIDAS-Verordnung.</p>
+  </details>
+</main>
+<footer>© 2026 Stefano Toncelli</footer>
+</body>
+</html>

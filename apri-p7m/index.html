@@ -4,25 +4,39 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Apri P7M – Firma Digitale</title>
-<meta name="description" content="App per Mac che apre i file .p7m e .p7s, verifica la firma digitale con l'elenco dei certificatori AgID e mostra il documento. Tutto sul tuo Mac.">
+<meta name="description" content="App per Mac che apre i file .p7m, .p7s e i PDF firmati, verifica la firma digitale con l&#x27;elenco dei certificatori AgID e mostra il documento. Tutto sul tuo Mac.">
 <link rel="alternate" hreflang="it" href="https://stefton71.github.io/apps/apri-p7m/">
 <link rel="alternate" hreflang="en" href="https://stefton71.github.io/apps/apri-p7m/en/">
+<link rel="alternate" hreflang="de" href="https://stefton71.github.io/apps/apri-p7m/de/">
+<link rel="alternate" hreflang="fr" href="https://stefton71.github.io/apps/apri-p7m/fr/">
+<link rel="alternate" hreflang="es" href="https://stefton71.github.io/apps/apri-p7m/es/">
+<link rel="alternate" hreflang="x-default" href="https://stefton71.github.io/apps/apri-p7m/">
 <link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/lingua.js" defer></script>
 </head>
 <body>
 <header class="top">
   <a class="home" href="../">App per Mac</a>
   <a href="supporto.html">Supporto</a>
   <a href="privacy.html">Privacy</a>
-  <a href="en/" lang="en" hreflang="en">English</a>
+  <details class="lang">
+    <summary aria-label="Lingua"><span aria-hidden="true">🌐</span> Italiano</summary>
+    <ul>
+      <li><a href="./" lang="it" hreflang="it" aria-current="page">Italiano</a></li>
+      <li><a href="en/" lang="en" hreflang="en">English</a></li>
+      <li><a href="de/" lang="de" hreflang="de">Deutsch</a></li>
+      <li><a href="fr/" lang="fr" hreflang="fr">Français</a></li>
+      <li><a href="es/" lang="es" hreflang="es">Español</a></li>
+    </ul>
+  </details>
 </header>
 <main>
   <section class="hero">
     <img src="icona.png" alt="Icona di Apri P7M">
     <div>
       <h1>Apri P7M – Firma Digitale</h1>
-      <p class="muted">Apri i file .p7m e .p7s, verifica la firma digitale e leggi il documento. La verifica avviene interamente sul tuo Mac.</p>
-      <span class="badge">Presto sul Mac App Store · macOS 14 o successivo</span>
+      <p class="muted">Apri i file .p7m e .p7s e i PDF firmati, verifica la firma digitale e leggi il documento. La verifica avviene interamente sul tuo Mac.</p>
+      <span class="badge">Presto sul Mac App Store · macOS 14 o successivo · Italiano, English, Deutsch, Français, Español</span>
     </div>
   </section>
 
@@ -35,17 +49,20 @@
     <li><strong>Certificato qualificato</strong> e dispositivo sicuro di firma (QSCD).</li>
     <li><strong>Validità del certificato</strong> alla data della marca temporale o alla data odierna.</li>
     <li><strong>Marca temporale</strong> verificata e usata come riferimento temporale.</li>
+    <li><strong>Modifiche successive:</strong> per i PDF, l'app segnala se il documento è stato modificato dopo la firma e mostra la versione firmata.</li>
     <li><strong>Stato di revoca</strong> (OCSP/CRL), se lo attivi nelle Impostazioni.</li>
   </ul>
 
   <h2>Funzioni</h2>
   <ul class="features">
+    <li>PDF firmati (PAdES e PKCS#7), anche con più firme e marche temporali del documento.</li>
     <li>Firme multiple (.pdf.p7m.p7m) e più firmatari.</li>
     <li>Firme staccate (.p7s) insieme al documento originale.</li>
     <li>File in formato binario, Base64 o PEM.</li>
     <li>Anteprima, apertura con l'app predefinita e «Salva con nome».</li>
     <li>Riconoscimento di PDF, fatture elettroniche XML, documenti Office e immagini.</li>
     <li>Rapporto di verifica da copiare.</li>
+    <li>Interfaccia in italiano, inglese, tedesco, francese e spagnolo, secondo la lingua del Mac.</li>
   </ul>
 
   <h2>Privacy</h2>

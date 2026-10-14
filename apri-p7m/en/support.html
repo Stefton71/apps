@@ -7,27 +7,37 @@
 <meta name="description" content="Support and frequently asked questions for Apri P7M – Digital Signature for macOS.">
 <link rel="alternate" hreflang="it" href="https://stefton71.github.io/apps/apri-p7m/supporto.html">
 <link rel="alternate" hreflang="en" href="https://stefton71.github.io/apps/apri-p7m/en/support.html">
+<link rel="alternate" hreflang="de" href="https://stefton71.github.io/apps/apri-p7m/de/support.html">
+<link rel="alternate" hreflang="fr" href="https://stefton71.github.io/apps/apri-p7m/fr/support.html">
+<link rel="alternate" hreflang="es" href="https://stefton71.github.io/apps/apri-p7m/es/support.html">
+<link rel="alternate" hreflang="x-default" href="https://stefton71.github.io/apps/apri-p7m/supporto.html">
 <link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/lingua.js" defer></script>
 </head>
 <body>
 <header class="top">
   <a class="home" href="./">Apri P7M</a>
   <a href="support.html">Support</a>
   <a href="privacy.html">Privacy</a>
-  <a href="../supporto.html" lang="it" hreflang="it">Italiano</a>
+  <details class="lang">
+    <summary aria-label="Language"><span aria-hidden="true">🌐</span> English</summary>
+    <ul>
+      <li><a href="../supporto.html" lang="it" hreflang="it">Italiano</a></li>
+      <li><a href="support.html" lang="en" hreflang="en" aria-current="page">English</a></li>
+      <li><a href="../de/support.html" lang="de" hreflang="de">Deutsch</a></li>
+      <li><a href="../fr/support.html" lang="fr" hreflang="fr">Français</a></li>
+      <li><a href="../es/support.html" lang="es" hreflang="es">Español</a></li>
+    </ul>
+  </details>
 </header>
 <main>
   <h1>Support</h1>
   <p class="muted">Apri P7M – Digital Signature for macOS</p>
 
   <h2>Contact</h2>
-  <p>Write to <a href="mailto:support@lifenex.it?subject=Apri%20P7M">support@lifenex.it</a> with your macOS version and, if possible, the text copied with «Copia rapporto» (Copy report). Please do not send confidential documents.</p>
+  <p>Write to <a href="mailto:support@lifenex.it?subject=Apri%20P7M">support@lifenex.it</a> with your macOS version and, if possible, the text copied with “Copy Report”. Please do not send confidential documents.</p>
 
   <h2>Frequently asked questions</h2>
-  <details>
-    <summary>Is the app available in English?</summary>
-    <p>The interface is currently in Italian only, as the app is designed for Italian qualified signatures. Support is available in English.</p>
-  </details>
   <details>
     <summary>Why is the signature shown as intact but with warnings?</summary>
     <p>The document has not been modified, but at least one certificate check failed or was not performed: for example revocation checking is off, the certificate has expired and there is no timestamp, or the provider is not on the AgID qualified list.</p>
@@ -41,16 +51,20 @@
     <p>A .p7s file contains only the signature: open the .p7s and choose the original document when the app asks for it.</p>
   </details>
   <details>
+    <summary>Can I verify signed PDFs (PAdES)?</summary>
+    <p>Yes: open the PDF like any other file. The app verifies every signature and timestamp in the PDF and tells you if the document was modified after signing; “Signed Version” shows the PDF exactly as it was when signed.</p>
+  </details>
+  <details>
     <summary>The trust service provider is not recognised.</summary>
-    <p>Open Settings and click «Aggiorna da AgID» (Update from AgID) to download the latest list of qualified providers.</p>
+    <p>Open Settings and click “Update from AgID” to download the latest list of qualified providers.</p>
   </details>
   <details>
     <summary>How do I open an .xml.p7m electronic invoice?</summary>
     <p>Open it like any other file: the app verifies the signature and extracts the invoice XML file, which you can save or open with your invoicing software.</p>
   </details>
   <details>
-    <summary>Can I verify signed PDFs (PAdES)?</summary>
-    <p>Not yet: this version verifies CAdES envelopes (.p7m and .p7s).</p>
+    <summary>Which languages does the app support?</summary>
+    <p>English, Italian, German, French and Spanish: the app automatically uses your Mac's language. You can choose another one in System Settings → General → Language & Region → Applications.</p>
   </details>
   <details>
     <summary>What legal value does the result have?</summary>

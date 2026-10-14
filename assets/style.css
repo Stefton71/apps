@@ -32,3 +32,10 @@ details { border-top: 1px solid var(--border); padding: 12px 0; }
 details summary { cursor: pointer; font-weight: 600; }
 footer { padding-top: 16px; padding-bottom: 40px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
 code { font-size: 0.9em; }
+.lang { position: relative; border: 0; padding: 0; }
+.lang summary { list-style: none; cursor: pointer; color: var(--accent); font-weight: 400; white-space: nowrap; }
+.lang summary::-webkit-details-marker { display: none; }
+.lang ul { position: absolute; right: 0; top: 1.9em; z-index: 10; min-width: 150px; margin: 0; padding: 6px 0; list-style: none; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14); }
+.lang li a { display: block; padding: 6px 14px; color: var(--text); text-decoration: none; }
+.lang li a:hover { background: var(--surface); }
+.lang li a[aria-current] { font-weight: 600; }

@@ -7,14 +7,28 @@
 <meta name="description" content="Supporto e domande frequenti su Apri P7M – Firma Digitale per macOS.">
 <link rel="alternate" hreflang="it" href="https://stefton71.github.io/apps/apri-p7m/supporto.html">
 <link rel="alternate" hreflang="en" href="https://stefton71.github.io/apps/apri-p7m/en/support.html">
+<link rel="alternate" hreflang="de" href="https://stefton71.github.io/apps/apri-p7m/de/support.html">
+<link rel="alternate" hreflang="fr" href="https://stefton71.github.io/apps/apri-p7m/fr/support.html">
+<link rel="alternate" hreflang="es" href="https://stefton71.github.io/apps/apri-p7m/es/support.html">
+<link rel="alternate" hreflang="x-default" href="https://stefton71.github.io/apps/apri-p7m/supporto.html">
 <link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/lingua.js" defer></script>
 </head>
 <body>
 <header class="top">
   <a class="home" href="./">Apri P7M</a>
   <a href="supporto.html">Supporto</a>
   <a href="privacy.html">Privacy</a>
-  <a href="en/support.html" lang="en" hreflang="en">English</a>
+  <details class="lang">
+    <summary aria-label="Lingua"><span aria-hidden="true">🌐</span> Italiano</summary>
+    <ul>
+      <li><a href="supporto.html" lang="it" hreflang="it" aria-current="page">Italiano</a></li>
+      <li><a href="en/support.html" lang="en" hreflang="en">English</a></li>
+      <li><a href="de/support.html" lang="de" hreflang="de">Deutsch</a></li>
+      <li><a href="fr/support.html" lang="fr" hreflang="fr">Français</a></li>
+      <li><a href="es/support.html" lang="es" hreflang="es">Español</a></li>
+    </ul>
+  </details>
 </header>
 <main>
   <h1>Supporto</h1>
@@ -37,6 +51,10 @@
     <p>I file .p7s contengono solo la firma: apri il .p7s e scegli il documento originale quando l'app lo chiede.</p>
   </details>
   <details>
+    <summary>Posso verificare i PDF firmati (PAdES)?</summary>
+    <p>Sì: apri il PDF come qualsiasi altro file. L'app verifica ogni firma e marca temporale contenuta nel PDF e segnala se il documento è stato modificato dopo la firma; con «Versione firmata» puoi vedere il PDF esattamente com'era quando è stato firmato.</p>
+  </details>
+  <details>
     <summary>Il certificatore non viene riconosciuto.</summary>
     <p>Apri Impostazioni → «Aggiorna da AgID» per scaricare l'elenco più recente dei certificatori qualificati.</p>
   </details>
@@ -45,8 +63,8 @@
     <p>Aprila come qualsiasi altro file: l'app verifica la firma ed estrae il file XML della fattura, che puoi salvare o aprire con il tuo programma di fatturazione.</p>
   </details>
   <details>
-    <summary>Posso verificare i PDF firmati (PAdES)?</summary>
-    <p>Non ancora: questa versione verifica le buste CAdES (.p7m e .p7s).</p>
+    <summary>In che lingua è l'app?</summary>
+    <p>In italiano, inglese, tedesco, francese e spagnolo: l'app usa automaticamente la lingua del Mac. Puoi sceglierne un'altra in Impostazioni di Sistema → Generali → Lingua e Zona → Applicazioni.</p>
   </details>
   <details>
     <summary>Che valore ha l'esito?</summary>

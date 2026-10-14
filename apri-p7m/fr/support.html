@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apri P7M – Assistance</title>
+<meta name="description" content="Assistance et questions fréquentes sur Apri P7M – Signature électronique pour macOS.">
+<link rel="alternate" hreflang="it" href="https://stefton71.github.io/apps/apri-p7m/supporto.html">
+<link rel="alternate" hreflang="en" href="https://stefton71.github.io/apps/apri-p7m/en/support.html">
+<link rel="alternate" hreflang="de" href="https://stefton71.github.io/apps/apri-p7m/de/support.html">
+<link rel="alternate" hreflang="fr" href="https://stefton71.github.io/apps/apri-p7m/fr/support.html">
+<link rel="alternate" hreflang="es" href="https://stefton71.github.io/apps/apri-p7m/es/support.html">
+<link rel="alternate" hreflang="x-default" href="https://stefton71.github.io/apps/apri-p7m/supporto.html">
+<link rel="stylesheet" href="../../assets/style.css">
+<script src="../../assets/lingua.js" defer></script>
+</head>
+<body>
+<header class="top">
+  <a class="home" href="./">Apri P7M</a>
+  <a href="support.html">Assistance</a>
+  <a href="privacy.html">Privacy</a>
+  <details class="lang">
+    <summary aria-label="Langue"><span aria-hidden="true">🌐</span> Français</summary>
+    <ul>
+      <li><a href="../supporto.html" lang="it" hreflang="it">Italiano</a></li>
+      <li><a href="../en/support.html" lang="en" hreflang="en">English</a></li>
+      <li><a href="../de/support.html" lang="de" hreflang="de">Deutsch</a></li>
+      <li><a href="support.html" lang="fr" hreflang="fr" aria-current="page">Français</a></li>
+      <li><a href="../es/support.html" lang="es" hreflang="es">Español</a></li>
+    </ul>
+  </details>
+</header>
+<main>
+  <h1>Assistance</h1>
+  <p class="muted">Apri P7M – Signature électronique pour macOS</p>
+
+  <h2>Contact</h2>
+  <p>Écrivez à <a href="mailto:support@lifenex.it?subject=Apri%20P7M">support@lifenex.it</a> en indiquant votre version de macOS et, si possible, le texte copié avec « Copier le rapport ». N'envoyez pas de documents confidentiels.</p>
+
+  <h2>Questions fréquentes</h2>
+  <details>
+    <summary>Pourquoi la signature est-elle « intègre, avec avertissements » ?</summary>
+    <p>Le document n'a pas été modifié, mais au moins un contrôle du certificat a échoué ou n'a pas été effectué : par exemple la vérification de révocation est désactivée, le certificat a expiré sans horodatage, ou le prestataire ne figure pas sur la liste qualifiée AgID.</p>
+  </details>
+  <details>
+    <summary>Le certificat a expiré : la signature est-elle valable ?</summary>
+    <p>Sans horodatage, on ne peut pas prouver que la signature a été apposée lorsque le certificat était valable. Si la signature contient un horodatage reconnu, l'app évalue le certificat à la date de l'horodatage.</p>
+  </details>
+  <details>
+    <summary>Comment vérifier un fichier .p7s ?</summary>
+    <p>Un fichier .p7s ne contient que la signature : ouvrez le .p7s et choisissez le document original lorsque l'app le demande.</p>
+  </details>
+  <details>
+    <summary>Puis-je vérifier des PDF signés (PAdES) ?</summary>
+    <p>Oui : ouvrez le PDF comme n'importe quel fichier. L'app vérifie chaque signature et chaque horodatage du PDF et indique si le document a été modifié après la signature ; « Version signée » affiche le PDF exactement tel qu'il était au moment de la signature.</p>
+  </details>
+  <details>
+    <summary>Le prestataire n'est pas reconnu.</summary>
+    <p>Ouvrez les Réglages et cliquez sur « Mettre à jour depuis AgID » pour télécharger la liste la plus récente des prestataires qualifiés.</p>
+  </details>
+  <details>
+    <summary>Comment ouvrir une facture électronique .xml.p7m ?</summary>
+    <p>Ouvrez-la comme n'importe quel fichier : l'app vérifie la signature et extrait le fichier XML de la facture, que vous pouvez enregistrer ou ouvrir avec votre logiciel de facturation.</p>
+  </details>
+  <details>
+    <summary>Dans quelles langues l'app est-elle disponible ?</summary>
+    <p>En français, anglais, italien, allemand et espagnol : l'app utilise automatiquement la langue de votre Mac. Vous pouvez en choisir une autre dans Réglages Système → Général → Langue et région → Applications.</p>
+  </details>
+  <details>
+    <summary>Quelle valeur a le résultat ?</summary>
+    <p>Il s'agit d'une vérification informative effectuée sur votre Mac, qui ne remplace pas les services de validation qualifiés prévus par le règlement eIDAS.</p>
+  </details>
+</main>
+<footer>© 2026 Stefano Toncelli</footer>
+</body>
+</html>
