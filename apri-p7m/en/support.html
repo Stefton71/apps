@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apri P7M – Support</title>
+<meta name="description" content="Support and frequently asked questions for Apri P7M – Digital Signature for macOS.">
+<link rel="alternate" hreflang="it" href="https://stefton71.github.io/apps/apri-p7m/supporto.html">
+<link rel="alternate" hreflang="en" href="https://stefton71.github.io/apps/apri-p7m/en/support.html">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="home" href="./">Apri P7M</a>
+  <a href="support.html">Support</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="../supporto.html" lang="it" hreflang="it">Italiano</a>
+</header>
+<main>
+  <h1>Support</h1>
+  <p class="muted">Apri P7M – Digital Signature for macOS</p>
+
+  <h2>Contact</h2>
+  <p>Write to <a href="mailto:support@lifenex.it?subject=Apri%20P7M">support@lifenex.it</a> with your macOS version and, if possible, the text copied with «Copia rapporto» (Copy report). Please do not send confidential documents.</p>
+
+  <h2>Frequently asked questions</h2>
+  <details>
+    <summary>Is the app available in English?</summary>
+    <p>The interface is currently in Italian only, as the app is designed for Italian qualified signatures. Support is available in English.</p>
+  </details>
+  <details>
+    <summary>Why is the signature shown as intact but with warnings?</summary>
+    <p>The document has not been modified, but at least one certificate check failed or was not performed: for example revocation checking is off, the certificate has expired and there is no timestamp, or the provider is not on the AgID qualified list.</p>
+  </details>
+  <details>
+    <summary>The certificate has expired: is the signature valid?</summary>
+    <p>Without a timestamp there is no proof that the signature was made while the certificate was valid. If the signature contains a recognised timestamp, the app checks the certificate at the time of the timestamp.</p>
+  </details>
+  <details>
+    <summary>How do I verify a .p7s file?</summary>
+    <p>A .p7s file contains only the signature: open the .p7s and choose the original document when the app asks for it.</p>
+  </details>
+  <details>
+    <summary>The trust service provider is not recognised.</summary>
+    <p>Open Settings and click «Aggiorna da AgID» (Update from AgID) to download the latest list of qualified providers.</p>
+  </details>
+  <details>
+    <summary>How do I open an .xml.p7m electronic invoice?</summary>
+    <p>Open it like any other file: the app verifies the signature and extracts the invoice XML file, which you can save or open with your invoicing software.</p>
+  </details>
+  <details>
+    <summary>Can I verify signed PDFs (PAdES)?</summary>
+    <p>Not yet: this version verifies CAdES envelopes (.p7m and .p7s).</p>
+  </details>
+  <details>
+    <summary>What legal value does the result have?</summary>
+    <p>It is an informational check performed on your Mac and does not replace the qualified validation services defined by the eIDAS Regulation.</p>
+  </details>
+</main>
+<footer>© 2026 Stefano Toncelli</footer>
+</body>
+</html>
