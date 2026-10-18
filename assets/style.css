@@ -1,37 +1,109 @@
 :root {
   color-scheme: light dark;
-  --text: #1d1d1f; --muted: #6e6e73; --bg: #ffffff; --surface: #f5f5f7; --accent: #0a5bd8; --border: #d2d2d7;
+  --text: #1d1d1f; --muted: #6e6e73; --bg: #ffffff; --surface: #f5f6f8; --card: #ffffff;
+  --accent: #0a5bd8; --border: #e2e4e9; --green: #1c9a5e;
+  --navy-1: #1a3e73; --navy-2: #0c2247;
+  --shadow: 0 1px 2px rgba(12, 34, 71, .06), 0 8px 24px rgba(12, 34, 71, .08);
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) { --text: #f5f5f7; --muted: #a1a1a6; --bg: #111113; --surface: #1d1d1f; --accent: #4f9bff; --border: #3a3a3c; }
+  :root:not([data-theme="light"]) {
+    --text: #f5f5f7; --muted: #a1a1a6; --bg: #0d0f14; --surface: #161a22; --card: #161a22;
+    --accent: #5ea0ff; --border: #2a2f3a; --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .35);
+  }
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+html { -webkit-text-size-adjust: 100%; overflow-x: clip; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 a { color: var(--accent); }
+img { max-width: 100%; }
+h1, h2, h3 { letter-spacing: -0.015em; }
+h1 { font-size: clamp(30px, 6vw, 48px); line-height: 1.1; margin: 0 0 12px; }
+h2 { font-size: clamp(22px, 3.5vw, 30px); line-height: 1.2; margin: 56px 0 16px; }
+h3 { font-size: 18px; margin: 0 0 6px; }
+.muted { color: var(--muted); }
+.small { font-size: 14px; }
+.center { text-align: center; }
+
+/* Intestazione e piè di pagina */
 header.top, main, footer { max-width: 760px; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
-header.top { display: flex; gap: 16px; align-items: center; padding-top: 20px; padding-bottom: 8px; font-size: 15px; }
+main.wide, .band-inner { max-width: 1040px; }
+header.top { display: flex; gap: 18px; align-items: center; padding-top: 18px; padding-bottom: 14px; font-size: 15px; max-width: 1040px; }
 header.top a { text-decoration: none; }
 header.top .home { color: var(--text); font-weight: 600; margin-right: auto; }
-main { padding-top: 24px; padding-bottom: 48px; }
-h1 { font-size: clamp(28px, 6vw, 40px); line-height: 1.15; margin: 0 0 8px; }
-h2 { font-size: 21px; margin: 36px 0 8px; }
-.muted { color: var(--muted); }
-.hero { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; margin-bottom: 24px; }
-.hero img { width: 112px; height: 112px; }
-.hero div { flex: 1 1 280px; }
-.badge { display: inline-block; padding: 6px 12px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border); font-size: 14px; color: var(--muted); }
-.screenshot { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border); margin: 8px 0 16px; }
-ul.features { padding-left: 20px; }
-ul.features li { margin: 6px 0; }
-.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
-.card { display: flex; gap: 14px; align-items: center; padding: 16px; border-radius: 14px; background: var(--surface); border: 1px solid var(--border); text-decoration: none; color: var(--text); }
-.card img { width: 56px; height: 56px; }
-.card strong { display: block; }
-.card span { color: var(--muted); font-size: 15px; }
+main { padding-top: 24px; padding-bottom: 56px; }
+footer { padding-top: 20px; padding-bottom: 40px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; max-width: 1040px; }
+
+/* Fascia d'apertura blu notte, come l'icona */
+.band { color: #fff; background: radial-gradient(1200px 500px at 50% -10%, #2a5aa0 0%, transparent 60%),
+  linear-gradient(180deg, var(--navy-1), var(--navy-2)); padding: 56px 16px 0; overflow: hidden; }
+.band-inner { margin: 0 auto; }
+.band-inner.center { text-align: center; padding-bottom: 72px; }
+.hero { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.app-icon { width: 128px; height: 128px; border-radius: 28px; box-shadow: 0 12px 32px rgba(0, 0, 0, .35); margin-bottom: 20px; }
+.lead { font-size: clamp(18px, 2.4vw, 21px); color: rgba(255, 255, 255, .82); max-width: 680px; margin: 0 auto 18px; }
+.chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 0 0 22px; }
+.chip { padding: 5px 12px; border-radius: 999px; font-size: 14px; background: rgba(255, 255, 255, .12); border: 1px solid rgba(255, 255, 255, .22); }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: inherit; margin: 0; }
+.hero .actions { justify-content: center; }
+.button { display: inline-block; padding: 11px 20px; border-radius: 999px; font-weight: 600; font-size: 15px; text-decoration: none;
+  background: var(--accent); color: #fff; border: 1px solid transparent; }
+.button.ghost { background: transparent; color: var(--accent); border-color: var(--border); }
+.button.light { background: #fff; color: var(--navy-2); }
+.button.ghost.light { background: transparent; color: #fff; border-color: rgba(255, 255, 255, .45); }
+span.button { cursor: default; }
+
+/* Vetrina: Mac con iPhone in primo piano */
+.showcase { position: relative; max-width: 1000px; margin: 44px auto 0; padding: 0 0 0; }
+.mac-shot { display: block; width: 88%; height: auto; border-radius: 14px 14px 0 0; box-shadow: 0 -2px 40px rgba(0, 0, 0, .35); }
+.phone-shot { position: absolute; right: 0; bottom: -60px; width: 23%; height: auto; border-radius: 28px;
+  border: 7px solid #0b0d12; box-shadow: 0 20px 50px rgba(0, 0, 0, .45); }
+
+/* Punti di forza */
+.highlights { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }
+.hl { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 22px; box-shadow: var(--shadow); }
+.hl p { margin: 0; color: var(--muted); font-size: 15.5px; }
+.ico { width: 34px; height: 34px; color: var(--green); margin-bottom: 10px; }
+
+/* iPhone e iPad */
+.split { display: grid; grid-template-columns: 1fr 1.1fr; gap: 32px; align-items: center; margin-top: 24px; }
+.split h2 { margin-top: 32px; }
+.tablet-shot { width: 100%; height: auto; border-radius: 22px; border: 8px solid #0b0d12; box-shadow: var(--shadow); }
+
+/* Dettagli */
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+ul.features { padding-left: 20px; margin: 8px 0; }
+ul.features li { margin: 7px 0; }
+.note { display: flex; gap: 14px; align-items: flex-start; margin-top: 36px; padding: 18px 20px; border-radius: 16px; background: var(--surface); border: 1px solid var(--border); }
+.note .ico { flex: none; margin: 2px 0 0; }
+.note p { margin: 0; }
+
+/* Altre app */
+.others { margin-top: 64px; padding: 36px; border-radius: 24px; background: var(--surface); border: 1px solid var(--border); }
+.others h2 { margin-top: 0; }
+.app-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; margin-top: 18px; }
+.app-card { display: flex; gap: 18px; align-items: flex-start; padding: 22px; border-radius: 18px; background: var(--card); border: 1px solid var(--border); box-shadow: var(--shadow); }
+.app-card img { width: 88px; height: 88px; border-radius: 20px; flex: none; box-shadow: 0 4px 14px rgba(0, 0, 0, .18); }
+.app-card p { margin: 0 0 12px; color: var(--muted); font-size: 15.5px; }
+.app-card .tag, .app-tile .tag { color: var(--text); font-weight: 600; font-size: 15px; margin-bottom: 6px; }
+
+/* Pagina iniziale: le tre app */
+.app-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: -48px; }
+.app-tile { display: flex; flex-direction: column; padding: 26px; border-radius: 22px; background: var(--card); border: 1px solid var(--border);
+  box-shadow: var(--shadow); color: var(--text); text-decoration: none; transition: transform .15s ease, box-shadow .15s ease; }
+.app-tile:hover { transform: translateY(-3px); box-shadow: 0 2px 4px rgba(12, 34, 71, .08), 0 16px 36px rgba(12, 34, 71, .14); }
+.app-tile img { width: 96px; height: 96px; border-radius: 22px; margin-bottom: 16px; box-shadow: 0 6px 18px rgba(0, 0, 0, .18); }
+.app-tile p { margin: 0 0 14px; color: var(--muted); font-size: 15.5px; flex: 1; }
+.app-tile p.tag { flex: none; }
+.app-tile .more { color: var(--accent); font-weight: 600; }
+
+/* Pagine di testo (privacy e supporto) */
 details { border-top: 1px solid var(--border); padding: 12px 0; }
 details summary { cursor: pointer; font-weight: 600; }
-footer { padding-top: 16px; padding-bottom: 40px; border-top: 1px solid var(--border); color: var(--muted); font-size: 14px; }
 code { font-size: 0.9em; }
+.screenshot { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border); margin: 8px 0 16px; }
+
+/* Menu della lingua */
 .lang { position: relative; border: 0; padding: 0; }
 .lang summary { list-style: none; cursor: pointer; color: var(--accent); font-weight: 400; white-space: nowrap; }
 .lang summary::-webkit-details-marker { display: none; }
@@ -40,9 +112,14 @@ code { font-size: 0.9em; }
 .lang li a:hover { background: var(--surface); }
 .lang li a[aria-current] { font-weight: 600; }
 
-/* Screenshot di iPhone e iPad affiancati */
-.devices { display: flex; gap: 16px; align-items: flex-end; margin: 8px 0 16px; }
-.devices img { height: auto; border-radius: 16px; border: 1px solid var(--border); }
-.devices img.phone { width: 30%; }
-.devices img.tablet { width: 66%; }
-@media (max-width: 560px) { .devices { flex-direction: column; align-items: center; } .devices img.phone { width: 70%; } .devices img.tablet { width: 100%; } }
+@media (max-width: 760px) {
+  .band { padding-top: 40px; }
+  .mac-shot { width: 100%; }
+  .phone-shot { position: relative; display: block; width: 52%; margin: -48px 4% 0 auto; bottom: 0; }
+  header.top { flex-wrap: wrap; gap: 6px 16px; }
+  header.top .home { flex: 1 1 100%; }
+  h1 { overflow-wrap: anywhere; }
+  .split, .columns { grid-template-columns: 1fr; }
+  .others { padding: 22px 16px; }
+  .app-card { flex-direction: column; }
+}
