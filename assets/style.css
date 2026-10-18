@@ -39,3 +39,10 @@ code { font-size: 0.9em; }
 .lang li a { display: block; padding: 6px 14px; color: var(--text); text-decoration: none; }
 .lang li a:hover { background: var(--surface); }
 .lang li a[aria-current] { font-weight: 600; }
+
+/* Screenshot di iPhone e iPad affiancati */
+.devices { display: flex; gap: 16px; align-items: flex-end; margin: 8px 0 16px; }
+.devices img { height: auto; border-radius: 16px; border: 1px solid var(--border); }
+.devices img.phone { width: 30%; }
+.devices img.tablet { width: 66%; }
+@media (max-width: 560px) { .devices { flex-direction: column; align-items: center; } .devices img.phone { width: 70%; } .devices img.tablet { width: 100%; } }
